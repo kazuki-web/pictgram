@@ -17,10 +17,15 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
   #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-  #
+  #    def extension_allowlist
+  def extension_allowlist
+    %w(jpg jpeg png)
+  end
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
-
+  def size_range
+    10.megabytes
+  end
   # Process files as they are uploaded:
   # process scale: [200, 300]
   #

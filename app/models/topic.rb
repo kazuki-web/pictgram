@@ -3,9 +3,9 @@ class Topic < ApplicationRecord
     validates :description, presence: true
     validates :image, presence: true
     
-    belong_to :user
+    belongs_to :user
     
-    mount_uploader :image, Imageloader
+    mount_uploader :image, ImageUploader
     
     has_many :favotites
     has_many :favorite_user, through: :favotites,source:'user'

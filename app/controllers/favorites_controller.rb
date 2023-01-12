@@ -1,13 +1,13 @@
 class FavoritesController < ApplicationController
     def index
-        @favorite_topics = current_user.favorite_topics
+        @favotites_topics = current_user.favotites_topics
     end
     
     def create
         favorite = Favorite.new
         favorite.user_id = current_user.id
         favorite.topic_id = params[:topic_id]
-
+        
         if favorite.save
             redirect_to topics_path, success: 'お気に入りに登録しました'
         else

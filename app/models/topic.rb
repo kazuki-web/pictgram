@@ -7,4 +7,6 @@ class Topic < ApplicationRecord
     
     mount_uploader :image, Imageloader
     
+    has_many :favotites
+    has_many :favorite_user, through: :favotites,source:'user'
 end

@@ -7,5 +7,7 @@ class User < ApplicationRecord
   
   has_secure_password
   
-  has_many :topic
+  has_many :topics
+  has_many :favotites
+  has_many :favotites_topics, through: :favorites, source:'topic'
 end

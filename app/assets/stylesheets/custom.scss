@@ -13,17 +13,13 @@ h1, h2 {
   padding-bottom: 15px;
   font-size: 20px;
   background-color: rgba(0,0,0,0.0);
-
+  
   &:hover {
     color: #fff;
   }
 }
 
-  h2 {
-    margin-bottom: 60px;
-  }
-  
-  .form-control {
+.form-control {
   height: 45px;
 }
 
@@ -36,10 +32,10 @@ h1, h2 {
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
-
+  
   .users-new-container {
     padding-top: 220px;
-
+    
     .form-group {
       margin-bottom: 20px;
     }
@@ -112,7 +108,20 @@ h1, h2 {
       margin-bottom: 20px;
       width: 100%;
     }
-
+    .like-btn{
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+      color: #808080;
+    }
+    
+    .unlike-btn {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+      background-color: #e54747;
+    }
+    
     .topic-index-icon {
       width: 35px;
       height: 30px;
